@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var member = ['lee', 'kim', 'han', 'leezche'];
+
+      document.write("<br>" + "배열의 추가"+ "<br>");
+      // push 함수를 통해 배열에 인자 추가
+      member.push('pushed1');
+
+      // concat 함수를 통해 다른 배열과 합침(뒤쪽애)
+      member = member.concat(['concat1', 'concat2']);
+
+      // unshift 함수를 통해 배열의 앞쪽에 인자를 추가함 *배열 추가는 안되는 듯
+      member.unshift('unshifted1');
+
+      // splice 함수를 통해 원하는 곳에 있는 인자를 대체함
+      // splice(index, howmany, element, ...)
+      member.splice(1, 1, 'spliced1', 'spliced2');
+      // length함수를 통해 배열의 길이만큼 반복문을 실행
+
+      for(i=0; i<member.length; i++){
+        document.write(member[i].toUpperCase() + "<br>");
+      }
+
+      document.write("<br>" + "배열의 제거"+ "<br>");
+      // shift 함수를 통해 맨 앞에 있는 배열을 제거함
+      member.shift()
+      // pop 함수를 통해 맨 뒤에 있는 배열을 제거함
+      member.pop()
+      for(i=0; i<member.length; i++){
+        document.write(member[i].toUpperCase() + "<br>");
+      }
+
+      document.write("<br>" + "배열의 정렬" + "<br>");
+      // 배열을 역순으로 정렬
+      member.reverse()
+      for(i=0; i<member.length; i++){
+        document.write(member[i].toUpperCase() + "<br>");
+      }
+      // 알파벳순으로 배열 정렬
+      member.sort()
+      for(i=0; i<member.length; i++){
+        document.write(member[i].toUpperCase() + "<br>");
+      }
+
+    </script>
+
+  </body>
+</html>

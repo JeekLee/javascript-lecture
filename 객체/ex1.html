@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    var grades  = {'abcd': 10, 'b': 20, 'c': 30};
+    // 객체.key 형식으로 값을 사용할 수 있음
+    document.write(grades.abcd + "<br>");
+    // 객체.[key] 형식으로 값을 사용할 수 있음
+    document.write(grades['ab'+'cd'] + "<br>");
+
+    document.write("객체의 for문" + "<br>");
+    //객체에서 for문을 사용할 때는, grade의 키를 인자로 불러올 수 있음
+    for(key in grades){
+      document.write("key: " + key + "     " + "value: " + grades[key] + "<br>" );
+    }
+  </script>
+</body>
+
+</html>
